@@ -19,6 +19,12 @@ function App() {
       <h1>{message}</h1>
       <nav>
         <Link to="/TicTacToe">Go to TicTacToe</Link>
+        <br />
+        <button>
+          <Link to="/MemoryMatrix" style={{ textDecoration: 'none', color: 'white' }}>
+            Choose Memory Matrix Game
+          </Link>
+          </button>
       </nav>
     </div>
   );

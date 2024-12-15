@@ -1,0 +1,68 @@
+/* Style for the overall game container */
+.game {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full screen height */
+  text-align: center;
+  margin: 0;
+  padding: 20px; /* Add padding to prevent clipping */
+  box-sizing: border-box;
+}
+
+h1 {
+  font-size: 24px;
+}
+
+.grid {
+  display: grid;
+  gap: 10px;
+  /* Use the smaller of viewport width or height for the grid size */
+  width: calc(min(60vw, 60vh)); /* Reduced size to 60% of viewport */
+  height: calc(min(60vw, 60vh)); /* Maintain aspect ratio */
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  padding: 30px; /* Padding to avoid cropping */
+  box-sizing: border-box; /* Ensures padding doesn't cause overflow */
+  overflow: hidden;
+}
+
+.square {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 1;
+  background-color: white;
+  border: 1px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.5s ease;
+}
+
+.square.correct {
+  background-color: blue;
+}
+
+.square.incorrect {
+  background-color: red;
+}
+
+.square.flashing {
+  background-color: blue;
+  opacity: 1;
+}
+
+.level-controls {
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.level-input {
+  padding: 5px;
+  font-size: 16px;
+  width: 40px;
+  text-align: center;
+}
