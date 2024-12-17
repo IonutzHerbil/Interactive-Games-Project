@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './MemoryMatrix.css';
+import '../../styles/MemoryMatrix.css';
 import Square from './Square';
 
 function MemoryMatrix() {
