@@ -1,54 +1,71 @@
 .minesweeper {
-    text-align: center;
-    font-family: Arial, sans-serif;
-    padding: 20px;
-    margin-top: 70px;
-  }
-  
-  .board {
-    display: grid;
-    grid-template-rows: repeat(8, 40px); /* Adjust for height */
-    grid-template-columns: repeat(8, 40px); /* Adjust for width */
-    gap: 2px;
-    margin: 20px auto;
-  }
-  
-  .cell {
-    width: 40px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid #333;
-    background-color: #ccc;
-    cursor: pointer;
-    font-size: 1rem;
-    font-weight: bold;
-    transition: background-color 0.2s;
-  }
-  
-  .cell:hover {
-    background-color: #ddd;
-  }
-  
-  .cell.mine {
-    background-color: red;
-    color: white;
-  }
-  
-  .controls button {
-    margin: 10px;
-    padding: 10px 20px;
-    font-size: 1rem;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-  .controls button:hover {
-    background-color: #0056b3;
-  }
-  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 120px; /* Space for navbar */
+  margin-bottom: 80px; /* Space for footer */
+  text-align: center;
+}
+
+.minesweeper h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+.board {
+  display: grid;
+  grid-template-rows: repeat(8, 40px);
+  grid-template-columns: repeat(8, 40px);
+  gap: 2px;
+  margin: 20px auto;
+  border: 3px solid #003366;
+  border-radius: 8px;
+  background-color: #333333;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.5);
+}
+
+.cell {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #222222;
+  background-color: #444444;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: background-color 0.2s, transform 0.1s;
+  border-radius: 4px;
+  color: #f0f0f0;
+}
+
+.cell:hover {
+  background-color: #555555;
+  transform: scale(1.03);
+}
+
+.cell.mine {
+  background-color: #d32f2f;
+  color: white;
+}
+
+.controls button {
+  margin: 10px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  background: linear-gradient(to right, #6a0dad, #adff2f);
+  color: #222222;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 700;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.controls button:hover {
+  background: linear-gradient(to right, #a020f0, #9cff00);
+  transform: scale(1.05);
+}

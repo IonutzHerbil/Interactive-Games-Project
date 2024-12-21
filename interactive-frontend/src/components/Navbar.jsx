@@ -10,7 +10,7 @@ const Navbar = () => {
                 <li><Link to="/">Home</Link></li>
                 <li><Link to="/TicTacToe">Tic Tac Toe</Link></li>
                 <li><Link to='/Minesweeper'>Minesweeper</Link></li>
-                <li><Link to='/MemoyMatrix'>Memoy Matrix</Link></li>
+                <li><Link to='/MemoryMatrix'>Memory Matrix</Link></li>
             </ul>
         </nav>
     );

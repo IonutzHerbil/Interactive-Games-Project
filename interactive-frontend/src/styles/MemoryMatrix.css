@@ -1,63 +1,48 @@
-/* Style for the overall game container */
+/* Global styles (for reference) */
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: #222222;
+  color: #f0f0f0;
+  font-family: 'Poppins', sans-serif;
+  height: 100%;
+  overflow-y: auto; /* Allow vertical scrolling */
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding-bottom: 200px; /* Ensure space above footer */
+}
+
+.container {
+  margin-top: 120px; /* Space for navbar */
+  text-align: center;
+  max-width: 800px;
+  margin: auto;
+}
+
+/* Memory Matrix Specific */
 .game {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  height: 100vh; /* Full screen height */
+  margin-top: 120px; 
+  margin-bottom: 200px; 
   text-align: center;
-  margin: 0;
-  padding: 20px; /* Add padding to prevent clipping */
+  padding: 20px;
   box-sizing: border-box;
 }
 
-h1 {
-  font-size: 24px;
-}
-
-.grid {
-  display: grid;
-  gap: 10px;
-  /* Use the smaller of viewport width or height for the grid size */
-  width: calc(min(60vw, 60vh)); /* Reduced size to 60% of viewport */
-  height: calc(min(60vw, 60vh)); /* Maintain aspect ratio */
-  justify-content: center;
-  align-items: center;
-  margin-top: 20px;
-  padding: 30px; /* Padding to avoid cropping */
-  box-sizing: border-box; /* Ensures padding doesn't cause overflow */
-  overflow: hidden;
-}
-
-.square {
-  width: 100%;
-  height: 100%;
-  aspect-ratio: 1;
-  background-color: white;
-  border: 1px solid black;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  transition: background-color 0.5s ease;
-}
-
-.square.correct {
-  background-color: blue;
-}
-
-.square.incorrect {
-  background-color: red;
-}
-
-.square.flashing {
-  background-color: blue;
-  opacity: 1;
+.game h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
 }
 
 .level-controls {
   margin-bottom: 10px;
-  text-align: center;
 }
 
 .level-input {
@@ -65,4 +50,98 @@ h1 {
   font-size: 16px;
   width: 40px;
   text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-left: 5px;
+}
+
+.countdown {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+/* Grid with squares */
+.grid {
+  display: grid;
+  gap: 10px;
+  /* Adjust size so squares are visible and fit better */
+  width: calc(min(50vw, 50vh));
+  height: calc(min(50vw, 50vh));
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  padding: 30px;
+  box-sizing: border-box;
+  overflow: hidden;
+  background-color: #333333;
+  border: 2px solid #003366;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.5);
+}
+
+/* Square styling */
+.square {
+  width: 100%;
+  height: 100%;
+  background-color: #444444;
+  border: 1px solid #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.5s ease;
+  font-weight: bold;
+  font-size: 1.2rem;
+  border-radius: 4px;
+  color: #f0f0f0;
+}
+
+.square.correct {
+  background-color: #0077cc;
+  color: #ffffff;
+}
+
+.square.incorrect {
+  background-color: #d32f2f;
+  color: #ffffff;
+}
+
+.square.flashing {
+  background-color: #0077cc;
+  opacity: 1;
+}
+
+/* Button styling (for next level button) */
+.next-level {
+  font-size: 1rem;
+  padding: 10px 20px;
+  margin: 10px;
+  background: linear-gradient(to right, #6a0dad, #adff2f);
+  color: #222222;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 700;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.next-level:hover {
+  background: linear-gradient(to right, #a020f0, #9cff00);
+  transform: scale(1.05);
+}
+
+/* Footer (assuming fixed) */
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background: linear-gradient(to right, purple, limegreen);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 -4px 10px rgba(0,0,0,0.5);
+  z-index: 1000;
 }

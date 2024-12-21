@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import '../../styles/MemoryMatrix.css';
+import '../styles/MemoryMatrix.css';
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 import Square from './Square'; // Assuming you have a separate Square component
 
 function MemoryMatrix() {
@@ -125,6 +127,8 @@ function MemoryMatrix() {
 
 
   return (
+    <div>
+      <Navbar/>
     <div className="game">
       <h1>Memory Pattern Game</h1>
       <div className="level-controls">
@@ -161,6 +165,8 @@ function MemoryMatrix() {
       >
         {renderSquares()}
       </div>
+    </div>
+    <Footer/>
     </div>
   );
 }

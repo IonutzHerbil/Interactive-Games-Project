@@ -1,31 +1,34 @@
 .footer {
-    background-color: rgb(55, 61, 55);
-    color: white;
-    text-align: center;
-    width: 100%;
-    height: auto; /* Dynamic height */
-    padding: 10px 0; /* Spacing inside the footer */
-    position: fixed; /* Sticks to the bottom */
+    position: fixed;
     bottom: 0;
     left: 0;
-}
-
-.footer-nav {
-    list-style: none; /* Removes default bullet points */
-    padding: 0; /* Removes default padding */
-    margin: 0; /* Removes default margin */
-    display: flex; /* Makes items inline */
-    justify-content: center; /* Centers items horizontally */
-    gap: 20px; /* Adds spacing between items */
-}
-
-.footer-nav li a {
-    color: #00bcd4; /* Link color */
-    text-decoration: none; /* Removes underline */
-    font-size: 14px; /* Adjusts font size */
-    transition: color 0.3s ease; /* Smooth hover effect */
-}
-
-.footer-nav li a:hover {
-    color: #f50057; /* Highlighted link color */
-}
+    width: 100%;
+    height: 60px;
+    background: linear-gradient(to right, purple, limegreen);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 -4px 10px rgba(0,0,0,0.5);
+  }
+  
+  .footer-nav {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .footer-nav li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 14px;
+    transition: color 0.3s ease, transform 0.2s;
+  }
+  
+  .footer-nav li a:hover {
+    color: #222222;
+    transform: scale(1.05);
+  }
+  

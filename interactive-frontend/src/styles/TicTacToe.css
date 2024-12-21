@@ -1,51 +1,26 @@
-/* General layout for Tic Tac Toe */
 .tictactoe {
   text-align: center;
-  font-family: Arial, sans-serif;
   padding: 20px;
-  margin-top: 80px;
-  margin-bottom: 80px;
+  margin-top: 120px; /* Ensure not covered by navbar */
+  margin-bottom: 80px; /* Ensure not covered by footer */
 }
 
-/* Navbar styles */
-.navbar {
-  height: 80px; /* Taller navbar */
-  background-color: #170e54;
-  color: white;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 20px;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
-}
-
-/* Footer styles */
-.footer {
-  height: 80px; /* Taller footer */
-  background-color: #003366;
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.2);
-}
-
-/* Board styles */
 .tictacboard {
   display: grid;
   grid-template-rows: repeat(3, 1fr);
   grid-template-columns: repeat(3, 1fr);
-  width: 150px;
-  height: 150px;
+  width: 180px;
+  height: 180px;
   margin: 20px auto;
-  gap: 2px;
-  border: 2px solid #003366;
-}   
+  gap: 4px;
+  border: 3px solid #003366;
+  border-radius: 8px;
+  background-color: #333333;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.5);
+}
 
-/* Cell styles */
 .tictaccell {
-  background-color: white;
+  background-color: #444444;
   border: 1px solid #003366;
   display: flex;
   align-items: center;
@@ -53,12 +28,13 @@
   font-size: 1.5rem;
   font-weight: bold;
   cursor: pointer;
-  aspect-ratio: 1 / 1;
+  border-radius: 4px;
   transition: background-color 0.3s ease, transform 0.2s ease;
+  color: #f0f0f0;
 }
 
 .tictaccell:hover {
-  background-color: #e0f7fa;
+  background-color: #555555;
   transform: scale(1.05);
 }
 
@@ -67,14 +43,16 @@ button {
   font-size: 1rem;
   padding: 10px 20px;
   margin: 10px;
-  background-color: #00509e;
-  color: white;
+  background: linear-gradient(to right, #6a0dad, #adff2f);
+  color: #222222;
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  font-weight: 700;
+  transition: background 0.3s, transform 0.2s;
 }
 
 button:hover {
-  background-color: #0077cc;
+  transform: scale(1.05);
+  background: linear-gradient(to right, #a020f0, #9cff00);
 }
